@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { FilmModel } from '../models/film.model';
 import { Observable } from 'rxjs';
 import { promise } from 'selenium-webdriver';
+import { FilmDetailsModel } from '../models/filmDetails.model';
+import { stringify } from '@angular/compiler/src/util';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +21,10 @@ export class FilmService {
   }
 
    getOptionList(): Observable<any[]> {
-    return  this.http.get<any[]>(this.baseUrl+'?fields=id,title');
+    return this.http.get<any[]>(this.baseUrl+'?fields=id,title');
+  }
+
+  async getFilmDetails(id: string): Promise<FilmDetailsModel>{
+    return await this.http.get<FilmDetailsModel>(`${this.baseUrl}/${id}`).toPromise();
   }
 }

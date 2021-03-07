@@ -13,6 +13,7 @@
           <ng-autocomplete
             [data]="data$ | async"
             [searchKeyword]="keyword"
+            (selected)='movieDetails($event)'
             [itemTemplate]="itemTemplate"
             [notFoundTemplate]="notFoundTemplate"
             placeholder="Search for a Film">

@@ -7,12 +7,14 @@ import { FilmsComponent } from './components/films/films.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './components/nav/nav.component';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
+import { FilmDetailsComponent } from './components/film-details/film-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmsComponent,
-    NavComponent
+    NavComponent,
+    FilmDetailsComponent
   ],
   imports: [
     BrowserModule,

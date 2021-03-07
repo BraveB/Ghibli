@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FilmModel } from 'src/app/models/film.model';
 import { FilmService } from 'src/app/services/film.service';
 
@@ -10,7 +11,7 @@ import { FilmService } from 'src/app/services/film.service';
 export class FilmsComponent implements OnInit {
 
   Films: FilmModel[];
-  constructor(private filmService: FilmService) { }
+  constructor(private filmService: FilmService, private router: Router) { }
 
   ngOnInit(): void {
     this.filmService.getFilmsList()
@@ -19,5 +20,6 @@ export class FilmsComponent implements OnInit {
   }
 
   filmDetails(id:string){
+    this.router.navigateByUrl(`/films/${id}`);
   }
 }
