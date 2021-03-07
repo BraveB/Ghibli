@@ -1,0 +1,12 @@
+.filmList{
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  }
+  .filmItem{
+    border: 1px solid black;
+    width: auto;
+    padding: 20px;
+    margin: 10px;
+  }

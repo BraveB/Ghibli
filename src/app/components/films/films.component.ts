@@ -19,6 +19,5 @@ export class FilmsComponent implements OnInit {
   }
 
   filmDetails(id:string){
-    console.log(this.Films.find(element => element.id === id));
   }
 }
