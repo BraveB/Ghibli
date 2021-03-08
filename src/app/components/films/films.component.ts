@@ -14,12 +14,8 @@ export class FilmsComponent implements OnInit {
   constructor(private filmService: FilmService, private router: Router) { }
 
   ngOnInit(): void {
-    this.filmService.getFilmsList()
+    this.filmService.getFilmsFormatedList()
     .then(films => this.Films = films)
     .catch(error => console.log(error));
-  }
-
-  filmDetails(id:string){
-    this.router.navigateByUrl(`/films/${id}`);
   }
 }

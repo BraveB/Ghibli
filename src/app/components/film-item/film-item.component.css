@@ -1,0 +1,20 @@
+
+  .filmItem{
+    border: 1px solid black;
+    width: auto;
+    padding: 20px;
+    margin: 10px;
+    background-color:azure;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  .heart {
+    font-size: 25px;
+    color:red;
+  }
+  .heart-des {
+    font-size: 25px;
+    color:#aaa;
+  }
