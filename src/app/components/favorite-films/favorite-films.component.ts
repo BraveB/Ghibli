@@ -16,4 +16,7 @@ export class FavoriteFilmsComponent implements OnInit {
     this.Films = this.filmService.getFavoriteFilms();
   }
 
+  showFilms(){
+    this.router.navigateByUrl(`/films`);
+  }
 }

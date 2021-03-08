@@ -1,5 +1,18 @@
-<div>
+<div *ngIf="Films.length > 0 ; then listBlock else noFavoriteBlock"></div>
+<ng-template #listBlock>
   <film-item
-      *ngFor="let film of Films"
-      [Film]="film"></film-item>
-</div>
+  *ngFor="let film of Films"
+  [Film]="film"></film-item>
+</ng-template>
+<ng-template #noFavoriteBlock>
+  <div class="container">
+    <div class="row container">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8 container">
+        <h3>It seems there is not favorite movies :(</h3>
+        <button mat-raised-button color="primary" (click)="showFilms()">Let's find a movie</button>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>
+</ng-template>
