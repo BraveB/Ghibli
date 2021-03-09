@@ -3,3 +3,21 @@
   padding: 20px;
   font-size : xx-large;
 }
+.filmList{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 0px;
+}
+
+@media (max-width: 1100px) {
+  .filmList{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .filmList{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+

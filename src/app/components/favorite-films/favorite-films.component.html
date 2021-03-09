@@ -1,8 +1,11 @@
 <div *ngIf="Films.length > 0 ; then listBlock else noFavoriteBlock"></div>
 <ng-template #listBlock>
-  <film-item
-  *ngFor="let film of Films"
-  [Film]="film"></film-item>
+    <h1 class="mainTitle">Your favorites are here!</h1>
+    <div class="filmList">
+    <film-item
+        *ngFor="let film of Films"
+        [Film]="film"></film-item>
+    </div>
 </ng-template>
 <ng-template #noFavoriteBlock>
   <div class="container">

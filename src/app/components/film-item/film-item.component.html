@@ -1,10 +1,10 @@
-<div  class="col-sm-12 filmItem">
-  <div class="col-sm-10">
+<div  class="filmItem">
+  <div class="film-body">
     <h2 class="title" (click)="filmDetails(Film.id)">{{Film.title}}</h2>
     <p><strong>Original title romanised: </strong>{{Film.original_title_romanised}}</p>
     <p><strong>Score:</strong> {{Film.rt_score}}</p>
   </div>
-  <div class="col-sm-2">
+  <div class="fixed-button">
       <button type="button" mat-fab color="white" (click)="toFavorite(Film)" [ngClass]="{'heart': Film.isFavorite,'heart-des': !Film.isFavorite}">
         <mat-icon >favorite</mat-icon>
     </button>

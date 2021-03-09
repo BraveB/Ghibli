@@ -1,15 +1,23 @@
-
   .filmItem{
     border: 2px solid #6495ED;
     border-radius: 15px;
-    width: auto;
-    padding: 20px;
+    padding: 20px 20px 0 0;
     margin: 10px;
     background-color:#C0D4F8;
-    display: block;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: left;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .film-body{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    margin-left: 20px;
   }
   .heart {
     font-size: 25px;
@@ -23,4 +31,8 @@
     cursor: pointer;
     font-weight: bold;
     color:#ED6495;
+  }
+  .fixed-button{
+    grid-row-start: 1;
+    grid-column-start: 6;
   }
