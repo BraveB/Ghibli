@@ -20,12 +20,13 @@ export class FilmItemComponent implements OnInit {
   }
 
   toFavorite(film){
-    if(!film.isFavorite){
-      this.filmService.addToFavorite(film.id);
+    const {id, isFavorite} = film
+    if(isFavorite){
+      this.filmService.removeFromFavorite(id);
     }
     else{
-      this.filmService.removeFromFavorite(film.id);
+      this.filmService.addToFavorite(id);
     }
-    film.isFavorite = !film.isFavorite;
+    film.isFavorite = !isFavorite;
   }
 }

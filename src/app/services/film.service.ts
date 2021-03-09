@@ -57,6 +57,5 @@ export class FilmService {
     const index = this.favoriteFilms.findIndex(film => film.id==id);
     if(index > -1)
       this.favoriteFilms.splice(index, 1);
-    console.log(this.favoriteFilms);
   }
 }

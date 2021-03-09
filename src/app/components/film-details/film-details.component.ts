@@ -15,10 +15,10 @@ export class FilmDetailsComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private filmService: FilmService) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params=>{
-      this.filmService.getFilmDetails(params.filmId)
-      .then(params => this.Film = params)
-      .catch(error=>console.log(error));
+    this.activatedRoute.params.subscribe(response=>{
+      this.filmService.getFilmDetails(response.filmId)
+      .then(response => this.Film = response)
+      .catch(error=>console.error(error));
     });
   }
 }
