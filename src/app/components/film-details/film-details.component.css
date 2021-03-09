@@ -1,0 +1,27 @@
+.title{
+  font-weight: bold;
+  color:#6495ED;
+}
+.originalTitle{
+  color:#ED6495;
+  font-weight: bolder;
+  font-size: large;
+}
+.romanisedTitle{
+  color: #A0A6DB;
+}
+strong{
+  color:#9564ED;
+}
+.wrapper{
+  border: 2px solid #6495ED;
+  border-radius: 15px;
+  width: auto;
+  padding: 20px;
+  background-color:#C0D4F8;
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: right;
+  margin-top: 10px;
+}

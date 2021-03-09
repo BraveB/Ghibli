@@ -1,10 +1,11 @@
 
   .filmItem{
-    border: 1px solid black;
+    border: 2px solid #6495ED;
+    border-radius: 15px;
     width: auto;
     padding: 20px;
     margin: 10px;
-    background-color:azure;
+    background-color:#C0D4F8;
     display: block;
     flex-direction: row;
     flex-wrap: wrap;
@@ -12,9 +13,14 @@
   }
   .heart {
     font-size: 25px;
-    color:red;
+    color:#ED6495;
   }
   .heart-des {
     font-size: 25px;
     color:#aaa;
+  }
+  .title{
+    cursor: pointer;
+    font-weight: bold;
+    color:#ED6495;
   }

@@ -1,9 +1,15 @@
-<div class="col-sm-4"></div>
-<div class="col-sm-8 container">
-  <h2>{{Film?.title}}</h2>
-  <p>{{Film?.original_title}}</p>
-  <p>{{Film?.original_title_romanised}}</p>
-  <p>{{Film?.release_date}}</p>
-  <p>{{Film?.rt_score}}</p>
-  <p>{{Film?.running_time}}</p>
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-7 container wrapper">
+    <h1 class="title">{{Film?.title}}</h1>
+    <p class="originalTitle">{{Film?.original_title}}</p>
+    <p class="romanisedTitle"><strong>{{Film?.original_title_romanised}}</strong></p>
+    <p><strong>Release date:</strong>{{Film?.release_date}}</p>
+    <strong>Score: </strong><p>{{Film?.rt_score}}</p>
+    <p><strong>Running time:</strong>{{Film?.running_time}} minutes</p>
+    <div>
+      <h3><strong>Description:</strong></h3>
+      <p>{{Film?.description}}</p>
+    </div>
+  </div>
 </div>

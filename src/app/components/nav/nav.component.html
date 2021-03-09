@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a routerLink="/" class="navbar-brand">Studio Ghibli</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainOptions" (click)="isCollapsed = !isCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="mainOptions" [ngbCollapse]="isCollapsed">
       <ul class="navbar-nav mr-auto">
         <li routerLinkActive="active"><a routerLink="/films" class="nav-link">Films</a></li>
         <li routerLinkActive="active"><a routerLink="/favorites" class="nav-link">Favorites</a></li>
       </ul>
       <ul class="navbar-nav navbar-right">
-        <li class="form-inline container-fluid">
+        <li class="form-inline">
           <ng-autocomplete
             [data]="data$ | async"
             [searchKeyword]="keyword"
@@ -32,6 +32,3 @@
     </div>
   </div>
 </nav>
-<div class="container-fluid">
-  <router-outlet></router-outlet>
-</div>

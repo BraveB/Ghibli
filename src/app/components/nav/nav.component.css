@@ -1,3 +1,10 @@
-.navbar{
-  background-color:aliceblue;
+.navbar-light{
+  background: #95ED64 !important;
+  color: white !important;
+}
+.ng-autocomplete {
+  width: 300px;
+}
+.active{
+  font-weight: bold;
 }

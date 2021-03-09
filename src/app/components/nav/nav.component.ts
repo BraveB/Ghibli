@@ -10,7 +10,7 @@ import { FilmService } from 'src/app/services/film.service';
 })
 export class NavComponent implements OnInit {
   public keyword = "title";
-
+  public isCollapsed = true;
   public data$: Observable<any[]>;
   constructor(private filmService: FilmService, private router: Router) { }
 
