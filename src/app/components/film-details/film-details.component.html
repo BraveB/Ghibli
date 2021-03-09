@@ -1,6 +1,10 @@
-<div class="row">
-  <div class="col-sm-3"></div>
-  <div class="col-sm-7 container wrapper">
+<div class="movie-detail">
+  <div class="movie-poster">
+    <img
+      [src]=[Poster?.poster_path]
+      class="img-responsive">
+  </div>
+  <div class="wrapper">
     <h1 class="title">{{Film?.title}}</h1>
     <p class="original-title">{{Film?.original_title}}</p>
     <p class="romanised-title"><strong>{{Film?.original_title_romanised}}</strong></p>
