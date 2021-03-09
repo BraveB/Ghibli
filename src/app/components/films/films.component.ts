@@ -16,6 +16,6 @@ export class FilmsComponent implements OnInit {
   ngOnInit(): void {
     this.filmService.getFilmsFormatedList()
     .then(films => this.Films = films)
-    .catch(error => console.log(error));
+    .catch(error => console.error(error));
   }
 }
